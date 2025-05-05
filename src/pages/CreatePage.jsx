@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PostForm from "../components/PostForm";
-import { firebaseUrl } from "../firebase-config";
+import { firebaseUrl } from "../firebase";
 
 export default function CreatePage() {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function CreatePage() {
         if (response.ok) {
             const data = await response.json();
             console.log("New post created: ", data);
-            navigate("/imageupload2/");
+            navigate("/");
         } else {
             console.log("Sorry, something went wrong");
         }

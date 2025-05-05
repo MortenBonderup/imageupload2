@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
-import { firebaseUrl } from "../firebase-config";
+import { firebaseUrl } from "../firebase";
 
 export default function HomePage() {
     const [posts, setPosts] = useState([]);

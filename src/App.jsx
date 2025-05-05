@@ -6,7 +6,7 @@ import Layout from "./Layout";
 
 const router = createBrowserRouter([
     {
-        path: "/imageupload2/",
+        path: "/",
         element: <Layout />,
         children: [
             {

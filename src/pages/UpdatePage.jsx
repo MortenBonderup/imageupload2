@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import PostForm from "../components/PostForm";
-import { firebaseUrl } from "../firebase-config";
+import { firebaseUrl } from "../firebase";
 
 export default function UpdatePage() {
     const [post, setPost] = useState();
@@ -27,7 +27,7 @@ export default function UpdatePage() {
         if (response.ok) {
             const data = await response.json();
             console.log("Post updated: ", data);
-            navigate("/imageupload2/");
+            navigate("/");
         } else {
             console.log("Sorry, something went wrong");
         }
@@ -41,7 +41,7 @@ export default function UpdatePage() {
             });
             if (response.ok) {
                 console.log("Post deleted");
-                navigate("/imageupload2/");
+                navigate("/");
             } else {
                 console.log("Sorry, something went wrong");
             }
